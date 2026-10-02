@@ -910,6 +910,19 @@
   </a>
 </div>
 
+<script>
+/* Reveal biztonsági háló: ha 3,5 s után sem futott el a fő JS,
+   a görgetésre rejtett tartalmakat láthatóvá teszi, és eltünteti
+   a nyitó intro-réteget is, hogy az oldal sose maradjon üresen */
+window.setTimeout(function () {
+  if (!document.body.classList.contains('is-ready')) {
+    document.documentElement.classList.add('reveal-fallback');
+    var intro = document.getElementById('intro');
+    if (intro) intro.setAttribute('hidden', '');
+    document.body.classList.remove('is-loading');
+  }
+}, 3500);
+</script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

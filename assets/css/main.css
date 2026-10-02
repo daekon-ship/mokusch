@@ -28,7 +28,7 @@
   --ease-out:cubic-bezier(.16,1,.3,1);
 
   --gut:clamp(18px,4vw,44px);
-  --sec:clamp(84px,11vw,168px);
+  --sec:clamp(56px,10vw,168px);
   --radius:2px;
 }
 
@@ -355,7 +355,7 @@ body.is-ready .hero__title .line>span{transform:none}
     linear-gradient(180deg,rgba(16,24,19,.78) 0%,rgba(16,24,19,.3) 30%,rgba(16,24,19,.5) 62%,rgba(16,24,19,.88) 100%)}
 }
 @media (max-width:560px){
-  .hero{padding-top:clamp(88px,11vh,120px);padding-bottom:clamp(112px,15vh,140px)}
+  .hero{min-height:0;height:100svh;padding-top:clamp(88px,11vh,120px);padding-bottom:clamp(112px,15vh,140px)}
   .hero__title{font-size:clamp(2.35rem,10.6vw,3.2rem)}
   .hero__sub{margin-top:18px;font-size:.98rem}
   .hero__cta{margin-top:26px;flex-direction:column;align-items:stretch;width:min(100%,330px);margin-inline:auto;gap:12px}
@@ -702,7 +702,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.9);cursor:p
 @media (max-width:560px){
   .season__board{grid-template-columns:1fr 1fr;gap:12px}
   .sea--1,.sea--2,.sea--3,.sea--4,.sea--5,.sea--6,.sea--7{grid-column:auto;margin-top:0;aspect-ratio:3/4}
-  .sea--3,.sea--5{grid-column:span 2;aspect-ratio:16/11}
+  .sea--3{aspect-ratio:16/11}
+  .sea--7{grid-column:1/-1;aspect-ratio:16/11}
 }
 
 /* ─── 18. Gallery ─────────────────────────────────────── */
@@ -859,7 +860,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.9);cursor:p
 .footer__totop:hover{color:var(--paper)}
 .footer__totop:hover svg{transform:translateY(-4px)}
 @media (max-width:900px){.footer__grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.footer__grid{grid-template-columns:1fr}}
+@media (max-width:520px){
+  .footer__grid{grid-template-columns:1fr}
+  .footer{padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+}
 
 /* ─── 22. Sticky CTA ──────────────────────────────────── */
 .sticky-cta{
@@ -916,3 +920,11 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.9);cursor:p
   .hero__title .line>span,[data-reveal="lines"] .line>span{transform:none!important}
   .cursor{display:none!important}
 }
+
+/* ─── 25. Reveal biztonsági háló ───────────────────────
+   Ha a JS nem indult el (régi böngésző, hiba), a tartalom ne maradjon
+   örökre láthatatlan — az index.html-ben lévő apró inline szkript akkor
+   teszi rá a reveal-fallback osztályt a <html>-re, ha 3,5s után sincs "is-ready": */
+html.reveal-fallback [data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}
+html.reveal-fallback .hero__title .line>span{transform:none!important}
+html.reveal-fallback [data-reveal="bleed"]{clip-path:none!important}
