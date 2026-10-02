@@ -31,6 +31,7 @@
   function onScrollHeader() {
     var y = window.pageYOffset;
     header.classList.toggle('is-scrolled', y > 60);
+    if (y < 240) navLinks.forEach(function (a) { a.classList.remove('is-active'); });
     lastY = y;
   }
 

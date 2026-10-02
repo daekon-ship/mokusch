@@ -111,6 +111,10 @@ body::after{
   display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);
   gap:clamp(26px,4vw,72px);align-items:end;
 }
+@media (max-width:900px){
+  .section-head--split{grid-template-columns:1fr;align-items:start;gap:clamp(16px,3vw,28px)}
+  .section-head--split .section-head__note{padding-bottom:0}
+}
 .section-head__note{max-width:46ch;font-size:1.08rem;line-height:1.65;padding-bottom:.6em}
 .section-head__aside{display:flex;flex-direction:column;gap:clamp(18px,2vw,28px);align-items:flex-start;max-width:44ch}
 .section-head__aside p{font-size:1.02rem}
