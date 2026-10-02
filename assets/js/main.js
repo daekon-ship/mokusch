@@ -93,6 +93,8 @@
   var pxEls = $$('[data-parallax]').map(function (el) {
     return { el: el, f: parseFloat(el.getAttribute('data-parallax')) || 0 };
   }).filter(function (o) { return o.f !== 0; });
+  /* parallax csak érzékeny mutatójú (asztali) eszközön — mobilon nem mozdul */
+  if (!(fine && !reduce)) pxEls = [];
   var ticking = false;
 
   function frame() {

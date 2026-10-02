@@ -504,7 +504,6 @@ body.is-ready .hero__title .line>span{transform:none}
 @media (max-width:900px){.cakes__row{grid-template-columns:1fr;gap:26px}}
 @media (max-width:620px){
   .cakes__masonry{columns:1}
-  .cakes__bleed-media{height:56vh}
 }
 
 /* ─── 16. Order ───────────────────────────────────────── */
@@ -928,3 +927,22 @@ input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.9);cursor:p
 html.reveal-fallback [data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}
 html.reveal-fallback .hero__title .line>span{transform:none!important}
 html.reveal-fallback [data-reveal="bleed"]{clip-path:none!important}
+
+/* ─── 26. Mobil tartalom-sűrűség ──────────────────────
+   Mobilon a tartalom ALAPBÓL látható: nincs görgetésre rejtett elem,
+   nincs parallax (JS-ben csak pointer:fine eszközön fut), a szekciók
+   tömörebbek, a magasságokat a tartalom határozza meg. */
+@media (max-width:760px){
+  [data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;transition:none}
+  [data-reveal="lines"] .line>span,.hero__title .line>span{transform:none!important;transition:none}
+  .story__grid,.place__grid{gap:22px}
+}
+@media (max-width:560px){
+  .section{padding-block:44px}
+  .section-head{margin-bottom:clamp(30px,7vw,44px)}
+  .hero{height:auto;min-height:100svh}
+  .cake__media img{max-height:440px;object-fit:cover}
+  .cakes__bleed-media{height:auto;aspect-ratio:4/3;max-height:420px}
+  .cakes__bleed-media img{height:100%;margin-top:0}
+  .cakes__cta{margin-top:32px;padding-top:26px}
+}
