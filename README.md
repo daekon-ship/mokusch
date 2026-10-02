@@ -14,7 +14,7 @@ Prémium látványterv a **Mókusch** (1012 Budapest, Várfok u. 30.) weboldalá
 
 - **Stack:** tiszta HTML + CSS + JS — külső függőség, build lépés nélkül
 - **Nyelv:** magyar
-- **Betűtípusok:** Fraunces (display) + Figtree (szövegtörzs), self-hosted woff2, latin + latin-ext
+- **Betűtípusok:** Playfair Display (címbetű) + Manrope (szövegtörzs), self-hosted woff2, latin + latin-ext
 - **Képek:** lokál tárolt webp (~27 MB), reszponzív srcset-tel
 - **Szekciók:** hero, történet, kínálat, torták (masonry), 8 lépéses rendelési wizard, évszakok, galéria + lightbox, vélemények, helyszín (klikk-re mutatott térkép), footer
 - **Reszponzív:** mobilra külön art direction (hero crop, sticky CTA), 44px touch targetek
