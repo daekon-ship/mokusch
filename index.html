@@ -177,10 +177,6 @@
   </div>
 
   <div class="hero__foot">
-    <a class="scroll-cue" href="#tortenet" aria-label="Görgetés a következő szekcióhoz">
-      <span class="scroll-cue__track" aria-hidden="true"><i></i></span>
-      <span class="scroll-cue__txt">Görgess</span>
-    </a>
     <div class="hero__rating" data-reveal="fade">
       <span class="hero__rating-num">4,7</span>
       <span class="hero__rating-meta">
@@ -194,8 +190,8 @@
 <!-- ══════════ TICKER ══════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker__track">
-    <span>GYŰJTÖGETÜNK</span><i>✳</i><span>SÜTÜNK</span><i>✳</i><span>FŐZÜNK</span><i>✳</i><span>ALKOTUNK</span><i>✳</i><span>SAJÁT SZÖRÖK</span><i>✳</i><span>HÁZIAS ÍZEK</span><i>✳</i>
-    <span>GYŰJTÖGETÜNK</span><i>✳</i><span>SÜTÜNK</span><i>✳</i><span>FŐZÜNK</span><i>✳</i><span>ALKOTUNK</span><i>✳</i><span>SAJÁT SZÖRÖK</span><i>✳</i><span>HÁZIAS ÍZEK</span><i>✳</i>
+    <span>GYŰJTÖGETÜNK</span><i>✳</i><span>SÜTÜNK</span><i>✳</i><span>FŐZÜNK</span><i>✳</i><span>ALKOTUNK</span><i>✳</i><span>SAJÁT SZÖRPÖK</span><i>✳</i><span>HÁZIAS ÍZEK</span><i>✳</i>
+    <span>GYŰJTÖGETÜNK</span><i>✳</i><span>SÜTÜNK</span><i>✳</i><span>FŐZÜNK</span><i>✳</i><span>ALKOTUNK</span><i>✳</i><span>SAJÁT SZÖRPÖK</span><i>✳</i><span>HÁZIAS ÍZEK</span><i>✳</i>
   </div>
 </div>
 
@@ -236,16 +232,16 @@
       </div>
 
       <div class="story__media">
-        <figure class="ph ph--a" data-parallax="-0.06" data-reveal="img">
+        <figure class="ph ph--a" data-parallax="-0.06" data-reveal="img" data-cursor="Nagyítás">
           <img src="assets/img/story-berries-1100.webp" srcset="assets/img/story-berries-640.webp 640w, assets/img/story-berries-1100.webp 1100w" sizes="(min-width: 900px) 34vw, 70vw" width="1100" height="734" alt="Kézben frissen szedett bogyós gyümölcsök" loading="lazy" decoding="async">
         </figure>
-        <figure class="ph ph--b" data-parallax="0.08" data-reveal="img">
+        <figure class="ph ph--b" data-parallax="0.08" data-reveal="img" data-cursor="Nagyítás">
           <img src="assets/img/story-decorating-1100.webp" srcset="assets/img/story-decorating-640.webp 640w, assets/img/story-decorating-1100.webp 1100w" sizes="(min-width: 900px) 30vw, 60vw" width="1100" height="733" alt="Kézzel díszített torta vörös ribizlivel" loading="lazy" decoding="async">
         </figure>
-        <figure class="ph ph--c" data-parallax="-0.1" data-reveal="img">
+        <figure class="ph ph--c" data-parallax="-0.1" data-reveal="img" data-cursor="Nagyítás">
           <img src="assets/img/story-moss-1100.webp" srcset="assets/img/story-moss-640.webp 640w, assets/img/story-moss-1100.webp 1100w" sizes="(min-width: 900px) 24vw, 50vw" width="1100" height="1650" alt="Vörös bogyó a zöld mohában" loading="lazy" decoding="async">
         </figure>
-        <figure class="ph ph--d" data-parallax="0.05" data-reveal="img">
+        <figure class="ph ph--d" data-parallax="0.05" data-reveal="img" data-cursor="Nagyítás">
           <img src="assets/img/story-dough-1100.webp" srcset="assets/img/story-dough-640.webp 640w, assets/img/story-dough-1100.webp 1100w" sizes="(min-width: 900px) 26vw, 60vw" width="1100" height="733" alt="Tészta gyúrása fa deszkán" loading="lazy" decoding="async">
         </figure>
         <span class="story__seal" aria-hidden="true">
@@ -458,13 +454,13 @@
         <!-- 1 -->
         <fieldset class="opanel is-active" data-step="1" data-label="Alkalom">
           <legend class="opanel__legend">Milyen alkalomra készül a torta?</legend>
-          <p class="opanel__hint">Válassz egyet — ha több is aktuális, az „egyebet" jelöld be.</p>
+          <p class="opanel__hint">Válassz egyet — ha több is aktuális, válaszd az „Egyéb alkalom” lehetőséget.</p>
           <div class="chips" data-required-group>
             <label class="chip"><input type="radio" name="alkalom" value="Születésnap" required><span>Születésnap</span></label>
             <label class="chip"><input type="radio" name="alkalom" value="Esküvő"><span>Esküvő</span></label>
             <label class="chip"><input type="radio" name="alkalom" value="Keresztelő / névnap"><span>Keresztelő / névnap</span></label>
             <label class="chip"><input type="radio" name="alkalom" value="Céges alkalom"><span>Céges alkalom</span></label>
-            <label class="chip"><input type="radio" name="alkalom" value="Ajtóra csüngős"><span>Csak úgy, magunknak</span></label>
+            <label class="chip"><input type="radio" name="alkalom" value="Csak úgy, magunknak"><span>Csak úgy, magunknak</span></label>
             <label class="chip"><input type="radio" name="alkalom" value="Egyéb"><span>Egyéb alkalom</span></label>
           </div>
           <p class="field-error" data-error-for="alkalom" role="alert" hidden>Válassz ki egy alkalmat a folytatáshoz.</p>
@@ -542,7 +538,7 @@
               <span class="drop__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="drop__txt"><b>Húzd ide a képeket</b><em>vagy kattints a tallózáshoz</em></span>
+              <span class="drop__txt"><b>Húzd ide a képeket</b> <em>— vagy kattints a tallózáshoz</em></span>
             </label>
             <ul class="drop__list" id="fileList" role="list"></ul>
             <p class="field-error" data-error-for="referencia" role="alert" hidden>Csak képfájlokat fogadunk el, darabonként legfeljebb 8 MB-ot.</p>
@@ -552,7 +548,7 @@
         <!-- 7 -->
         <fieldset class="opanel" data-step="7" data-label="Kapcsolat" hidden>
           <legend class="opanel__legend">Hogyan érhetünk el?</legend>
-          <p class="opanel__hint">Az ajánlatot 1–2 munkanapon belül visszük.</p>
+          <p class="opanel__hint">1–2 munkanapon belül válaszolunk az ajánlatkérésre.</p>
           <div class="field-row">
             <div class="field">
               <label for="nev">Név</label>
@@ -572,7 +568,7 @@
               <p class="field-error" data-error-for="telefon" role="alert" hidden>A telefonszám csak számokat és + jelet tartalmazhat.</p>
             </div>
             <div class="field">
-              <label for="atvétel">Átvétel módja</label>
+              <label for="atvetel">Átvétel módja</label>
               <select id="atvetel" name="atvetel">
                 <option value="Helyben, a Várfok utcában">Helyben, a Várfok utcában</option>
                 <option value="Előzetes egyeztetéssel">Előzetes egyeztetéssel</option>
@@ -582,7 +578,7 @@
           </div>
           <label class="check">
             <input type="checkbox" id="hogoz" name="hozzajarulas" required>
-            <span>Hozzájárulok, hogy a Mókusch az ajánlatkérésem kapcsolatban megkeressen. <span class="opt">Az adatokat csak erre a célra használjuk.</span></span>
+            <span>Hozzájárulok, hogy a Mókusch az ajánlatkéréssel kapcsolatban megkeressen. <span class="opt">Az adataimat kizárólag erre a célra használjuk.</span></span>
           </label>
           <p class="field-error" data-error-for="hozzajarulas" role="alert" hidden>A küldéshez szükség van a hozzájárulásra.</p>
         </fieldset>
@@ -753,27 +749,21 @@
       </div>
     </div>
 
-    <ul class="proof__grid" role="list">
-      <li class="quote" data-reveal="fade" style="--d:.05s">
-        <span class="quote__index" aria-hidden="true">01</span>
-        <span class="quote__stars" aria-hidden="true">★★★★★</span>
-        <p class="quote__text">„Ide kerül egy rövid, valódi Google-vélemény — egy mondat a helyről.”</p>
-        <p class="quote__src">Helykitöltő · ellenőrzött értékelés</p>
+    <ul class="proof__band" role="list">
+      <li data-reveal="fade" style="--d:.05s">
+        <span class="proof__band-t">Gyűjtögetve, sütve</span>
+        <span class="proof__band-d">Ami csak lehet, mi magunk szedünk vagy gyűjtünk — gyümölcsöt, bodzát, gyógynövényt.</span>
       </li>
-      <li class="quote" data-reveal="fade" style="--d:.12s">
-        <span class="quote__index" aria-hidden="true">02</span>
-        <span class="quote__stars" aria-hidden="true">★★★★★</span>
-        <p class="quote__text">„Ide kerül a vendég szava a tortáról, a kávéról vagy a reggeliről.”</p>
-        <p class="quote__src">Helykitöltő · ellenőrzött értékelés</p>
+      <li data-reveal="fade" style="--d:.12s">
+        <span class="proof__band-t">Kézzel, kis adagban</span>
+        <span class="proof__band-d">A piték, a szörpök és a torták is a műhelyben készülnek, szezonálisan, rövid úton.</span>
       </li>
-      <li class="quote" data-reveal="fade" style="--d:.19s">
-        <span class="quote__index" aria-hidden="true">03</span>
-        <span class="quote__stars" aria-hidden="true">★★★★★</span>
-        <p class="quote__text">„Ide kerül az, amiért a vendégek visszatérnek — valódi idézetben.”</p>
-        <p class="quote__src">Helykitöltő · ellenőrzött értékelés</p>
+      <li data-reveal="fade" style="--d:.19s">
+        <span class="proof__band-t">Egyedi torták</span>
+        <span class="proof__band-d">Születésnapra, esküvőre, keresztelőre — az elképzelésedet tortává építjük.</span>
       </li>
     </ul>
-    <p class="proof__disclosure" data-reveal="fade">A vendégidézetek helye: kizárólag valódi, ellenőrzött Google-értékeléseket teszünk ide. A számok a jelenlegi nagyságrendet jelölik.</p>
+    <p class="proof__disclosure" data-reveal="fade">A vendégvélemények helye: ide kizárólag valódi, ellenőrzött Google-értékelések kerülnek majd. A 4,7-es pontszám és az 500+ vélemény nagyságrend az élesítés előtt még ellenőrzésre szorul.</p>
   </div>
 </section>
 

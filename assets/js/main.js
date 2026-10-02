@@ -242,12 +242,26 @@
     var img = $('img', ov), cap = $('figcaption', ov);
     var idx = 0, opener = null;
 
-    function fullSrc(src) { return src.replace(/-(\d+)\.webp$/, '-1800.webp'); }
+    /* a legnagyobb, ténylegesen elérhető srcset-változat (max. 1800) */
+    function bestSrc(source) {
+      var best = null, fallback = null;
+      (source.getAttribute('srcset') || '').split(',').forEach(function (part) {
+        var bits = part.trim().split(/\s+/);
+        if (!bits[0]) return;
+        var w = bits[1] ? parseInt(bits[1], 10) || 0 : 0;
+        if (!fallback || w > fallback.w) fallback = { w: w, url: bits[0] };
+        if (w > 0 && w <= 1800 && (!best || w > best.w)) best = { w: w, url: bits[0] };
+      });
+      var pick = best || fallback;
+      if (!pick) return source.currentSrc || source.src;
+      return new URL(pick.url, window.location.href).href;
+    }
     function show(i) {
       idx = (i + triggers.length) % triggers.length;
       var t = triggers[idx];
       var source = $('img', t);
-      img.src = fullSrc(source.currentSrc || source.src);
+      if (!source) return;
+      img.src = bestSrc(source);
       img.alt = source.alt || '';
       var fc = t.querySelector('figcaption');
       cap.textContent = fc ? fc.textContent : '';
